@@ -7,6 +7,8 @@ export const temas = sqliteTable("temas", {
   nombre: text("nombre").notNull(),
   tipo: text("tipo").notNull().default("arco"),
   descripcion: text("descripcion").notNull().default(""),
+  temporada: text("temporada").notNull().default(""),
+  relevancia: integer("relevancia").notNull().default(3),
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
     .$defaultFn(() => new Date()),
